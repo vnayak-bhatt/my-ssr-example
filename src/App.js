@@ -1,4 +1,8 @@
 import React from "react";
+import { Route, Switch, NavLink } from 'react-router-dom';
+import Home from './Home';
+import Logos from './Home';
+import NotFound from './NotFound';
 import "./App.css";
 
 
@@ -15,9 +19,26 @@ function  App ( )  {
 
     return (
         <>
-        <img src="./en/logos.svg" className="App-logo" alt="logo" />
-        <img src="./pt/logos.svg" className="App-logo" alt="logo" />
-        <img src="./es/logos.svg" className="App-logo" alt="logo" />
+        <div>
+            <ul>
+                <li>
+                    <NavLink to="/">Home</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/logo">Logo</NavLink>
+                </li>
+            </ul>
+        </div>
+        <Switch>
+            <Route
+                exact
+                path="/"
+                render={props => <Home name="Alligator.io" {...props} />}
+            />
+            <Route path="/logo" component={Logos} />
+            <Route component={NotFound} />
+        </Switch>
+
         <p>{count}</p>
         <button onClick={increment}>Increment</button>
         <button onClick={decrement}>Decrement</button>
