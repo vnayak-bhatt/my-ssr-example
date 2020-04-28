@@ -1,6 +1,6 @@
 # my-ssr-example
-A simple Server Side Rendering example with image and router integration 
-steps to run SSR
+A simple Server Side Rendering example with image and router integration. <br />
+Steps to run SSR: <br />
 => in the root folder run the following commands:
 1. npm run build 
 2. npm run ssr 
