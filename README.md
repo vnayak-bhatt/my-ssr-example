@@ -1,5 +1,13 @@
 # my-ssr-example
 A simple Server Side Rendering example with image and router integration 
+steps to run SSR
+=> in the root folder run the following commands:
+1. npm run build 
+2. npm run ssr 
+
+Your App is running on localhost:8000.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
