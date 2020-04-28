@@ -1,24 +1,15 @@
 import React from "react";
 import { Route, Switch, NavLink } from 'react-router-dom';
 import Home from './Home';
-import Logos from './Home';
+import Logo from './Logos';
 import NotFound from './NotFound';
 import "./App.css";
 
 
 function  App ( )  {
-    const [count, setCount] = React.useState(0);
-
-    const increment = () => {
-        setCount(count + 1);
-    };
-
-    const decrement = () => {
-        setCount(count - 1);
-    };
-
     return (
         <>
+        <img src="./logos.svg" className="App-logo" alt="enlogo"/>
         <div>
             <ul>
                 <li>
@@ -33,15 +24,13 @@ function  App ( )  {
             <Route
                 exact
                 path="/"
-                render={props => <Home name="Alligator.io" {...props} />}
+                render={props => <Home />}
             />
-            <Route path="/logo" component={Logos} />
+            <Route path="/logo"
+                   render={props => <Logo />}
+            />
             <Route component={NotFound} />
         </Switch>
-
-        <p>{count}</p>
-        <button onClick={increment}>Increment</button>
-        <button onClick={decrement}>Decrement</button>
         </>
     );
 }
