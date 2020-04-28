@@ -15,7 +15,9 @@ function  App ( )  {
 
     return (
         <>
-        <img src="./logos.svg" className="App-logo" alt="logo" />
+        <img src="./en/logos.svg" className="App-logo" alt="logo" />
+        <img src="./pt/logos.svg" className="App-logo" alt="logo" />
+        <img src="./es/logos.svg" className="App-logo" alt="logo" />
         <p>{count}</p>
         <button onClick={increment}>Increment</button>
         <button onClick={decrement}>Decrement</button>
